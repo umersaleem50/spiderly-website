@@ -76,21 +76,8 @@ const Navbar = ({ stars }: NavbarProps) => {
           <div className="hidden lg:flex items-center">
             <div className="flex items-center gap-x-4">
               <Button asChild size="sm" variant="outline">
-<<<<<<< HEAD
-                <Link
-                  href="https://github.com/filiptrivan/spiderly"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Star className="size-4 mr-2" />
-                  Star on GitHub
-                  <span className="ml-2 px-2 py-0.5 bg-muted rounded-full text-xs font-semibold">
-                    56
-                  </span>
-=======
                 <Link href={GITHUB_REPO_URL} target="_blank" rel="noopener noreferrer">
                   <GitHubStarsBadge stars={stars} />
->>>>>>> 04d7b27 (feat(navbar): fetch GitHub star count from API)
                 </Link>
               </Button>
             </div>

@@ -89,15 +89,7 @@ const MobileNavbar = ({ stars }: MobileNavbarProps) => {
                 rel="noopener noreferrer"
                 className={buttonVariants({ className: 'w-full', variant: 'outline' })}
               >
-<<<<<<< HEAD
-                <Star className="size-4 mr-2" />
-                Star on GitHub
-                <span className="ml-2 px-2 py-0.5 bg-muted rounded-full text-xs font-semibold">
-                  56
-                </span>
-=======
                 <GitHubStarsBadge stars={stars} />
->>>>>>> 04d7b27 (feat(navbar): fetch GitHub star count from API)
               </Link>
             </div>
           </div>
