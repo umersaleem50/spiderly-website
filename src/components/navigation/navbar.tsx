@@ -11,14 +11,18 @@ import {
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import { cn, NAV_LINKS } from '@/utils';
-import { GITHUB_STARS } from '@/utils/constants/nav-links';
-import { Star } from 'lucide-react';
+import { GITHUB_REPO_URL } from '@/utils/constants/nav-links';
 import Link from 'next/link';
 import React from 'react';
 import AnimationContainer from '../global/animation-container';
+import GitHubStarsBadge from './github-stars-badge';
 import MobileNavbar from './mobile-navbar';
 
-const Navbar = () => {
+interface NavbarProps {
+  stars: number;
+}
+
+const Navbar = ({ stars }: NavbarProps) => {
   return (
     <header
       className={cn(
@@ -72,6 +76,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center">
             <div className="flex items-center gap-x-4">
               <Button asChild size="sm" variant="outline">
+<<<<<<< HEAD
                 <Link
                   href="https://github.com/filiptrivan/spiderly"
                   target="_blank"
@@ -82,12 +87,16 @@ const Navbar = () => {
                   <span className="ml-2 px-2 py-0.5 bg-muted rounded-full text-xs font-semibold">
                     56
                   </span>
+=======
+                <Link href={GITHUB_REPO_URL} target="_blank" rel="noopener noreferrer">
+                  <GitHubStarsBadge stars={stars} />
+>>>>>>> 04d7b27 (feat(navbar): fetch GitHub star count from API)
                 </Link>
               </Button>
             </div>
           </div>
 
-          <MobileNavbar />
+          <MobileNavbar stars={stars} />
         </div>
       </AnimationContainer>
     </header>
